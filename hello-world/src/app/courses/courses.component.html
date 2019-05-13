@@ -3,6 +3,12 @@
   <li *ngFor="let course of courses">{{ course }}</li>
 </ul>
 
-<button class="btn btn-primary" [class.active]="isActive" (click)="onSave()">
-  Save
-</button>
+<div (click)="onSaveDiv($event)">
+  <button
+    class="btn btn-primary"
+    [class.active]="isActive"
+    (click)="onSave($event)"
+  >
+    Save
+  </button>
+</div>

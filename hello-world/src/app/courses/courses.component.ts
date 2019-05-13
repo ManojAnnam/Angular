@@ -18,7 +18,13 @@ export class CoursesComponent implements OnInit {
   public title: string = "hai Manoj";
   public isActive: boolean = true;
 
-  onSave() {
-    console.log("Button Clicked");
+  onSave(event) {
+    console.log("Button Clicked", event);
+    /*we can stop event bubbling in this way*/
+    event.stopPropagation();
+  }
+
+  onSaveDiv(event) {
+    console.log("Div Clicked", event);
   }
 }
