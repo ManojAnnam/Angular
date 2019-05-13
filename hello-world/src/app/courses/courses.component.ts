@@ -27,4 +27,8 @@ export class CoursesComponent implements OnInit {
   onSaveDiv(event) {
     console.log("Div Clicked", event);
   }
+
+  onKey(event: any) {
+    console.log(event.target.value);
+  }
 }
