@@ -17,4 +17,8 @@ export class CoursesComponent implements OnInit {
   ngOnInit() {}
   public title: string = "hai Manoj";
   public isActive: boolean = true;
+
+  onSave() {
+    console.log("Button Clicked");
+  }
 }
