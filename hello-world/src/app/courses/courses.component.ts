@@ -10,7 +10,6 @@ export class CoursesComponent implements OnInit {
   public courses: string[];
   public email: string;
   constructor(public courseService: CoursesService) {
-    debugger;
     this.courses = courseService.getAllCourses();
     console.log(this.courses);
   }
