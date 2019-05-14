@@ -5,6 +5,6 @@ import { Injectable } from "@angular/core";
 export class CoursesService {
   public courses: string[];
   getAllCourses() {
-    return ["Manoj", "Annam", "Sai"];
+    return ["Manoj-Annam", "Annam-Manoj", "Sai-Manoj"];
   }
 }
