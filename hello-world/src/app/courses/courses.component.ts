@@ -8,6 +8,7 @@ import { CoursesService } from "../courses.service";
 })
 export class CoursesComponent implements OnInit {
   public courses: string[];
+  public email: string;
   constructor(public courseService: CoursesService) {
     debugger;
     this.courses = courseService.getAllCourses();
@@ -29,6 +30,6 @@ export class CoursesComponent implements OnInit {
   }
 
   onKey(event: any) {
-    console.log(event.target.value);
+    console.log(this.email);
   }
 }

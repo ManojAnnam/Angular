@@ -3,7 +3,7 @@
   <li *ngFor="let course of courses">{{ course }}</li>
 </ul>
 
-<div (click)="onSaveDiv($event)">
+<div>
   <button
     class="btn btn-primary"
     [class.active]="isActive"
@@ -11,5 +11,6 @@
   >
     Save
   </button>
-  <input (keyup)="onKey($event)" />
+  <input [(ngModel)]="email" (keyup.enter)="onKey()" />
+  <!-- <input [(ngModel)]="email" (blur)="onKey()" /> -->
 </div>
