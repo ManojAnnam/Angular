@@ -7,9 +7,15 @@ import { AppComponent } from "./app.component";
 import { CoursesComponent } from "./courses/courses.component";
 import { SummaryPipe } from "./pipes/summary.pipe";
 import { AngularFontAwesomeModule } from "angular-font-awesome";
+import { TitleCaseConverterComponent } from "./title-case-converter/title-case-converter.component";
 
 @NgModule({
-  declarations: [AppComponent, CoursesComponent, SummaryPipe],
+  declarations: [
+    AppComponent,
+    CoursesComponent,
+    SummaryPipe,
+    TitleCaseConverterComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
