@@ -9,9 +9,11 @@ import { CoursesService } from "../courses.service";
 export class CoursesComponent implements OnInit {
   public courses: string[];
   public email: string;
+  public isEmptyIcon: boolean;
   constructor(public courseService: CoursesService) {
     this.courses = courseService.getAllCourses();
     console.log(this.courses);
+    this.isEmptyIcon = true;
   }
 
   ngOnInit() {}
@@ -30,5 +32,9 @@ export class CoursesComponent implements OnInit {
 
   onKey(event: any) {
     console.log(this.email);
+  }
+
+  onIconClick() {
+    this.isEmptyIcon = !this.isEmptyIcon;
   }
 }

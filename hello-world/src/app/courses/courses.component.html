@@ -15,5 +15,5 @@
   <!-- <input [(ngModel)]="email" (blur)="onKey()" /> -->
 </div>
 
-<fa name="star-o" size="4x"></fa>
-<fa name="star" size="4x"></fa>
+<fa name="star-o" *ngIf="isEmptyIcon" (click)="onIconClick()" size="4x"></fa>
+<fa name="star" *ngIf="!isEmptyIcon" (click)="onIconClick()" size="4x"></fa>
