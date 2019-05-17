@@ -1,6 +1,6 @@
 <h2 class="mx8">{{ courses.length }}</h2>
 <ul>
-  <li *ngFor="let course of courses">{{ course | summary }}</li>
+  <li *ngFor="let course of courses">{{ course | summary | uppercase }}</li>
 </ul>
 
 <div>
@@ -14,3 +14,6 @@
   <input [(ngModel)]="email" (keyup.enter)="onKey()" />
   <!-- <input [(ngModel)]="email" (blur)="onKey()" /> -->
 </div>
+
+<fa name="star-o" size="4x"></fa>
+<fa name="star" size="4x"></fa>
