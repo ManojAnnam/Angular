@@ -6,7 +6,8 @@ import { CoursesService } from "../courses.service";
   templateUrl: "./courses.component.html",
   styleUrls: ["./courses.component.css"]
 })
-export class CoursesComponent implements OnInit {
+export class CoursesComponent implements OnInit
+ {
   public courses: string[];
   public email: string;
   public isEmptyIcon: boolean;
