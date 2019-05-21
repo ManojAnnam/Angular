@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: "app-star-icon",
@@ -6,14 +6,15 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./star-icon.component.css"]
 })
 export class StarIconComponent implements OnInit {
-  @Input('is-Empty') isEmptyIcon: boolean;
+  @Input("is-Empty") isEmptyIcon: boolean;
+  @Output() change = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {}
 
   onIconClick() {
-    debugger;
     this.isEmptyIcon = !this.isEmptyIcon;
+    this.change.emit();
   }
 }

@@ -7,8 +7,10 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "Angular-Learning";
-  post:object={
-    isEmpty : false
+  post: object = {
+    isEmpty: false
   };
-  
+  Notify() {
+    console.log("Icon is Clicked");
+  }
 }
