@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from "@angular/core";
   styleUrls: ["./star-icon.component.css"]
 })
 export class StarIconComponent implements OnInit {
-  @Input() isEmptyIcon: boolean;
+  @Input('is-Empty') isEmptyIcon: boolean;
 
   constructor() {}
 
