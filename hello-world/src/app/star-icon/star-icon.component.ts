@@ -15,6 +15,6 @@ export class StarIconComponent implements OnInit {
 
   onIconClick() {
     this.isEmptyIcon = !this.isEmptyIcon;
-    this.change.emit();
+    this.change.emit(this.isEmptyIcon);
   }
 }

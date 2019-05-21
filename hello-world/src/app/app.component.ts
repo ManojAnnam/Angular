@@ -10,7 +10,7 @@ export class AppComponent {
   post: object = {
     isEmpty: false
   };
-  Notify() {
-    console.log("Icon is Clicked");
+  Notify(isEmptyValue) {
+    console.log("Empty Value:",isEmptyValue);
   }
 }
