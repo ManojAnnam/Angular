@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
 })
 export class StarIconComponent implements OnInit {
   @Input("is-Empty") isEmptyIcon: boolean;
-  @Output() change = new EventEmitter();
+  @Output("change") clicked = new EventEmitter();
 
   constructor() {}
 
@@ -15,6 +15,6 @@ export class StarIconComponent implements OnInit {
 
   onIconClick() {
     this.isEmptyIcon = !this.isEmptyIcon;
-    this.change.emit(this.isEmptyIcon);
+    this.clicked.emit(this.isEmptyIcon);
   }
 }

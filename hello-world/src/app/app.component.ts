@@ -11,6 +11,6 @@ export class AppComponent {
     isEmpty: false
   };
   Notify(isEmptyValue) {
-    console.log("Empty Value:",isEmptyValue);
+    console.log("Empty Value:", isEmptyValue);
   }
 }
