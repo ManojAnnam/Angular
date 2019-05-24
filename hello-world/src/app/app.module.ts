@@ -11,6 +11,7 @@ import { TitleCaseConverterComponent } from "./title-case-converter/title-case-c
 import { StarIconComponent } from './star-icon/star-icon.component';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
 import { LikesComponent } from './likes/likes.component';
+import { DirectivesUsageComponent } from './directives-usage/directives-usage.component';
 
 @NgModule({
    declarations: [
@@ -20,7 +21,8 @@ import { LikesComponent } from './likes/likes.component';
       TitleCaseConverterComponent,
       StarIconComponent,
       BootstrapPanelComponent,
-      LikesComponent
+      LikesComponent,
+      DirectivesUsageComponent
    ],
    imports: [
       BrowserModule,
