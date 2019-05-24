@@ -8,7 +8,8 @@ import { Component } from "@angular/core";
 export class AppComponent {
   title = "Angular-Learning";
   post: object = {
-    isEmpty: false
+    isEmpty: true,
+    count:100
   };
   Notify(isEmptyValue) {
     console.log("Empty Value:", isEmptyValue);

@@ -10,6 +10,7 @@ import { AngularFontAwesomeModule } from "angular-font-awesome";
 import { TitleCaseConverterComponent } from "./title-case-converter/title-case-converter.component";
 import { StarIconComponent } from './star-icon/star-icon.component';
 import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
+import { LikesComponent } from './likes/likes.component';
 
 @NgModule({
    declarations: [
@@ -18,7 +19,8 @@ import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.compo
       SummaryPipe,
       TitleCaseConverterComponent,
       StarIconComponent,
-      BootstrapPanelComponent
+      BootstrapPanelComponent,
+      LikesComponent
    ],
    imports: [
       BrowserModule,
