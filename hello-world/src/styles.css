@@ -5,6 +5,7 @@
 
 /*For font-awesome to work*/
 @import "../node_modules/font-awesome/css/font-awesome.css";
+
 /* To move from Left */
 body {
   padding: 20px;
