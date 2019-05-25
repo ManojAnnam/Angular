@@ -1,6 +1,9 @@
-<div [hidden]="courses.length == 0">
-  Courses Exist
-</div>
-<div [hidden]="courses.length > 0">
-  No Courses
+<ul class="nav nav-pills">
+  <li [class.active]="courseID == 1"><a (click)="courseID = 1">MapView</a></li>
+  <li [class.active]="courseID == 2"><a (click)="courseID = 2">ListView</a></li>
+</ul>
+<div [ngSwitch]="courseID">
+  <div *ngSwitchCase="'1'">Course 1</div>
+  <div *ngSwitchCase="'2'">Course 2</div>
+  <div *ngSwitchDefault>Course 3-other</div>
 </div>

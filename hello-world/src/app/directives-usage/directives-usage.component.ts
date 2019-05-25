@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./directives-usage.component.css"]
 })
 export class DirectivesUsageComponent implements OnInit {
-  courses: number[] = [1, 2];
+  courseID: number = 1;
 
   constructor() {}
 
