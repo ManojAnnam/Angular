@@ -1,6 +1,6 @@
-<div [hidden]="courses.length == 0">
-  Courses Exist
-</div>
-<div [hidden]="courses.length > 0">
-  No Courses
-</div>
+<button mat-raised-button color="primary" (click)="loadCourses()">
+  Primary
+</button>
+<ul *ngIf="courses">
+  <li *ngFor="let course of courses; trackBy:trackCourse">{{ course.name }}</li>
+</ul>

@@ -6,6 +6,9 @@
 /*For font-awesome to work*/
 @import "../node_modules/font-awesome/css/font-awesome.css";
 
+/*For Material to work */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 /* To move from Left */
 body {
   padding: 20px;

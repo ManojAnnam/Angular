@@ -6,9 +6,21 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./directives-usage.component.css"]
 })
 export class DirectivesUsageComponent implements OnInit {
-  courses: number[] = [1, 2];
-
   constructor() {}
 
   ngOnInit() {}
+
+  courses: object[];
+
+  loadCourses() {
+    this.courses = [
+      { id: 1, name: "m1" },
+      { id: 2, name: "m2" },
+      { id: 3, name: "m3" }
+    ];
+  }
+
+  trackCourse(index, course) {
+    return course ? course.id : undefined;
+  }
 }
