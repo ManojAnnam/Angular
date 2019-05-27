@@ -1,4 +1,19 @@
 <h2 class="mx8">{{ courses.length }}</h2>
 <ul>
-  <li *ngFor="let course of courses">{{ course }}</li>
+  <li *ngFor="let course of courses">{{ course | summary | uppercase }}</li>
 </ul>
+
+<div>
+  <button
+    class="btn btn-primary"
+    [class.active]="isActive"
+    (click)="onSave($event)"
+  >
+    Save
+  </button>
+  <input [(ngModel)]="email" (keyup.enter)="onKey()" />
+  <!-- <input [(ngModel)]="email" (blur)="onKey()" /> -->
+</div>
+
+<fa name="star-o" *ngIf="isEmptyIcon" (click)="onIconClick()" size="4x"></fa>
+<fa name="star" *ngIf="!isEmptyIcon" (click)="onIconClick()" size="4x"></fa>

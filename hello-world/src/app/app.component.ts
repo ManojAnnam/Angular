@@ -6,5 +6,12 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "hello-world";
+  title = "Angular-Learning";
+  post: object = {
+    isEmpty: true,
+    count:100
+  };
+  Notify(isEmptyValue) {
+    console.log("Empty Value:", isEmptyValue);
+  }
 }

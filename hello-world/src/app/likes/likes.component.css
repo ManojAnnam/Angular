@@ -1,0 +1,15 @@
+.heartstyle{
+    color:#ccc;   
+}
+
+.heartstyle:hover{
+    cursor: pointer;    
+}
+
+.heartClicked{
+    color:deeppink;  
+}
+
+
+
+
