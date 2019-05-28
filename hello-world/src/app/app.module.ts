@@ -2,7 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { MatButtonModule } from "@angular/material";
+import { MatButtonModule, MatInputModule } from "@angular/material";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -14,6 +14,7 @@ import { StarIconComponent } from "./star-icon/star-icon.component";
 import { BootstrapPanelComponent } from "./bootstrap-panel/bootstrap-panel.component";
 import { LikesComponent } from "./likes/likes.component";
 import { DirectivesUsageComponent } from "./directives-usage/directives-usage.component";
+import { InputFormatDirective } from './input-format.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DirectivesUsageComponent } from "./directives-usage/directives-usage.co
     StarIconComponent,
     BootstrapPanelComponent,
     LikesComponent,
-    DirectivesUsageComponent
+    DirectivesUsageComponent,
+    InputFormatDirective
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import { DirectivesUsageComponent } from "./directives-usage/directives-usage.co
     FormsModule,
     AngularFontAwesomeModule,
     BrowserAnimationsModule,
-
+    MatInputModule,
     MatButtonModule
   ],
   providers: [],
