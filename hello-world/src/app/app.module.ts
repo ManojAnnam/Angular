@@ -20,32 +20,38 @@ import { LikesComponent } from "./likes/likes.component";
 import { DirectivesUsageComponent } from "./directives-usage/directives-usage.component";
 import { InputFormatDirective } from "./input-format.directive";
 import { AssignmentZippyComponent } from "./assignment-zippy/assignment-zippy.component";
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CoursesComponent,
-    SummaryPipe,
-    TitleCaseConverterComponent,
-    StarIconComponent,
-    BootstrapPanelComponent,
-    LikesComponent,
-    DirectivesUsageComponent,
-    InputFormatDirective,
-    AssignmentZippyComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    AngularFontAwesomeModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    MatExpansionModule,
-    MatButtonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [CoursesComponent]
+   declarations: [
+      AppComponent,
+      CoursesComponent,
+      SummaryPipe,
+      TitleCaseConverterComponent,
+      StarIconComponent,
+      BootstrapPanelComponent,
+      LikesComponent,
+      DirectivesUsageComponent,
+      InputFormatDirective,
+      AssignmentZippyComponent,
+      ContactFormComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      FormsModule,
+      AngularFontAwesomeModule,
+      BrowserAnimationsModule,
+      MatInputModule,
+      MatExpansionModule,
+      MatButtonModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ],
+   entryComponents: [
+      CoursesComponent
+   ]
 })
 export class AppModule {}
