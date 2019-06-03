@@ -44,6 +44,12 @@
     </textarea>
   </div>
 
+  <div class="checkbox">
+    <label
+      ><input type="checkbox" required ngModel name="isSubscribed" /> Subscribe
+      to mailing list</label
+    >
+  </div>
   <button [disabled]="!f.valid">Submit</button>
   <pre>{{ f.value | json }}</pre>
 </form>
