@@ -31,6 +31,7 @@
   <div class="form-group">
     <label for="comment">Comment</label>
     <textarea
+      required
       ngModel
       name="comment"
       #comment="ngModel"
@@ -42,7 +43,7 @@
     >
     </textarea>
   </div>
-  <button>Submit</button>
-  <button type="button">Add</button>
+
+  <button [disabled]="!f.valid">Submit</button>
   <pre>{{ f.value | json }}</pre>
 </form>
