@@ -1,12 +1,12 @@
-<form>
+<form #f="ngForm" (ngSubmit)="submitForm(f)">
   <div class="form-group">
     <label for="firstName">FirstName</label>
     <input
       required
-      ngModel
-      name="firstName"
       minlength="3"
       pattern="banana"
+      ngModel
+      name="firstName"
       #firstName="ngModel"
       (change)="log(firstName)"
       id="firstName"
@@ -39,4 +39,5 @@
     >
     </textarea>
   </div>
+  <button>Submit</button>
 </form>
