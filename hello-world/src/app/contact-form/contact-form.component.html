@@ -1,30 +1,33 @@
 <form #f="ngForm" (ngSubmit)="submitForm(f)">
-  <div class="form-group">
-    <label for="firstName">FirstName</label>
-    <input
-      required
-      minlength="3"
-      pattern="banana"
-      ngModel
-      name="firstName"
-      #firstName="ngModel"
-      (change)="log(firstName)"
-      id="firstName"
-      type="text"
-      class="form-control"
-    />
-    <div
-      class="alert alert-danger"
-      *ngIf="firstName.touched && !firstName.valid"
-    >
-      <div *ngIf="firstName.errors.required">FirstName is Required</div>
-      <div *ngIf="firstName.errors.minlength">
-        FirstName should be of Length
-        {{ firstName.errors.minlength.requiredLength }}
+  <div ngModelGroup="contact" #contact="ngModelGroup">
+    <div class="form-group">
+      <label for="firstName">FirstName</label>
+      <input
+        required
+        minlength="3"
+        pattern="banana"
+        ngModel
+        name="firstName"
+        #firstName="ngModel"
+        (change)="log(firstName)"
+        id="firstName"
+        type="text"
+        class="form-control"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="firstName.touched && !firstName.valid"
+      >
+        <div *ngIf="firstName.errors.required">FirstName is Required</div>
+        <div *ngIf="firstName.errors.minlength">
+          FirstName should be of Length
+          {{ firstName.errors.minlength.requiredLength }}
+        </div>
+        <div *ngIf="firstName.errors.pattern">FirstName pattern is wrong..</div>
       </div>
-      <div *ngIf="firstName.errors.pattern">FirstName pattern is wrong..</div>
     </div>
   </div>
+
   <div class="form-group">
     <label for="comment">Comment</label>
     <textarea
@@ -40,4 +43,5 @@
     </textarea>
   </div>
   <button>Submit</button>
+  <pre>{{ f.value | json }}</pre>
 </form>
