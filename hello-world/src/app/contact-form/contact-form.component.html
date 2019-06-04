@@ -55,7 +55,6 @@
     <label for="contactMethod">ContactMethod</label>
     <select
       required
-      multiple
       ngModel
       name="contactMethod"
       id="contactMethod"
@@ -66,6 +65,18 @@
         method.name
       }}</option>
     </select>
+  </div>
+
+  <div *ngFor="let method of contactMethods" class="radio">
+    <label>
+      <input
+        type="radio"
+        ngModel
+        name="contactRadioButton"
+        [value]="method.id"
+      />
+      {{ method.name }}
+    </label>
   </div>
   <button [disabled]="!f.valid">Submit</button>
   <pre>{{ f.value | json }}</pre>
