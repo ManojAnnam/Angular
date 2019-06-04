@@ -17,4 +17,10 @@ export class ContactFormComponent implements OnInit {
   submitForm(f) {
     console.log(f);
   }
+
+  contactMethods: object[] = [
+    { id: 1, name: "Email1" },
+    { id: 2, name: "Email2" },
+    { id: 3, name: "Email3" }
+  ];
 }
