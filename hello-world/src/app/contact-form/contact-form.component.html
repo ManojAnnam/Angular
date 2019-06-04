@@ -61,7 +61,7 @@
       class="form-control"
     >
       <option value="">--</option>
-      <option *ngFor="let method of contactMethods" [value]="method.id">{{
+      <option *ngFor="let method of contactMethods" [ngValue]="method">{{
         method.name
       }}</option>
     </select>
