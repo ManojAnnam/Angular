@@ -14,4 +14,7 @@ export class SignupFormComponent {
   submit() {
     console.log(this.form);
   }
+  get username() {
+    return this.form.get("username");
+  }
 }
