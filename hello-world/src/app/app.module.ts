@@ -1,5 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgModule } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {
@@ -20,38 +20,37 @@ import { LikesComponent } from "./likes/likes.component";
 import { DirectivesUsageComponent } from "./directives-usage/directives-usage.component";
 import { InputFormatDirective } from "./input-format.directive";
 import { AssignmentZippyComponent } from "./assignment-zippy/assignment-zippy.component";
-import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ContactFormComponent } from "./contact-form/contact-form.component";
+import { SignupFormComponent } from "./signup-form/signup-form.component";
 
 @NgModule({
-   declarations: [
-      AppComponent,
-      CoursesComponent,
-      SummaryPipe,
-      TitleCaseConverterComponent,
-      StarIconComponent,
-      BootstrapPanelComponent,
-      LikesComponent,
-      DirectivesUsageComponent,
-      InputFormatDirective,
-      AssignmentZippyComponent,
-      ContactFormComponent
-   ],
-   imports: [
-      BrowserModule,
-      AppRoutingModule,
-      FormsModule,
-      AngularFontAwesomeModule,
-      BrowserAnimationsModule,
-      MatInputModule,
-      MatExpansionModule,
-      MatButtonModule
-   ],
-   providers: [],
-   bootstrap: [
-      AppComponent
-   ],
-   entryComponents: [
-      CoursesComponent
-   ]
+  declarations: [
+    AppComponent,
+    CoursesComponent,
+    SummaryPipe,
+    TitleCaseConverterComponent,
+    StarIconComponent,
+    BootstrapPanelComponent,
+    LikesComponent,
+    DirectivesUsageComponent,
+    InputFormatDirective,
+    AssignmentZippyComponent,
+    ContactFormComponent,
+    SignupFormComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    AngularFontAwesomeModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatExpansionModule,
+    MatButtonModule,
+    ReactiveFormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent],
+  entryComponents: [CoursesComponent]
 })
 export class AppModule {}
