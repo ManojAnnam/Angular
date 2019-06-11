@@ -7,6 +7,9 @@
       type="text"
       class="form-control"
     />
+    <div *ngIf="username.pending">
+      Checking for uniqueness....
+    </div>
     <div
       class="alert alert-danger"
       *ngIf="username.touched && username.invalid"
