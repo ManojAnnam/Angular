@@ -39,6 +39,17 @@
       class="form-control"
     />
   </div>
+  <div formGroupName="account">
+    <div class="form-group">
+      <label for="password">PhoneNumber</label>
+      <input
+        formControlName="phone"
+        id="phone"
+        type="text"
+        class="form-control"
+      />
+    </div>
+  </div>
   <pre>{{ form.value | json }}</pre>
   <button class="btn btn-primary" type="submit">Sign Up</button>
 </form>

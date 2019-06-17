@@ -18,7 +18,10 @@ export class SignupFormComponent {
       ],
       UsernameValidators.shouldBeUnique
     ),
-    password: new FormControl("")
+    password: new FormControl(""),
+    account: new FormGroup({
+      phone: new FormControl("")
+    })
   });
   submit() {
     this.form.setErrors({
