@@ -21,6 +21,9 @@ export class SignupFormComponent {
     password: new FormControl("")
   });
   submit() {
+    this.form.setErrors({
+      invalidLogin: true
+    });
     console.log(this.form);
   }
   get username() {
