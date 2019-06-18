@@ -10,15 +10,20 @@ import { UsernameValidators } from "../Common/ValidatorFunctions/username-valida
 export class PasswordChangeComponent implements OnInit {
   form: FormGroup;
   constructor(fb: FormBuilder) {
-    this.form = fb.group({
-      oldPassword: [
-        "",
-        Validators.required,
-        UsernameValidators.invalidOldPassword
-      ],
-      newPassword: ["", Validators.required],
-      confirmPassword: ["", Validators.required]
-    });
+    this.form = fb.group(
+      {
+        oldPassword: [
+          "",
+          Validators.required,
+          UsernameValidators.invalidOldPassword
+        ],
+        newPassword: ["", Validators.required],
+        confirmPassword: ["", Validators.required]
+      },
+      {
+        validator: UsernameValidators.passwordsShouldMatch
+      }
+    );
   }
 
   ngOnInit() {}

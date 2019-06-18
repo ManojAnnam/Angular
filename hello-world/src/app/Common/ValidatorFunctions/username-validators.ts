@@ -29,4 +29,17 @@ export class UsernameValidators {
       }, 1000);
     });
   }
+
+  static passwordsShouldMatch(
+    control: AbstractControl
+  ): ValidationErrors | null {
+    let newPassword = control.get("newPassword");
+    let confirmPassword = control.get("confirmPassword");
+    if (newPassword.value !== confirmPassword.value) {
+      return {
+        passwordsShouldMatch: true
+      };
+    }
+    return null;
+  }
 }
