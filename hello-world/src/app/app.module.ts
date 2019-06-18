@@ -23,6 +23,7 @@ import { AssignmentZippyComponent } from "./assignment-zippy/assignment-zippy.co
 import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { SignupFormComponent } from "./signup-form/signup-form.component";
 import { NewCoursesComponent } from './new-courses/new-courses.component';
+import { PasswordChangeComponent } from './password-change/password-change.component';
 
 @NgModule({
    declarations: [
@@ -38,7 +39,8 @@ import { NewCoursesComponent } from './new-courses/new-courses.component';
       AssignmentZippyComponent,
       ContactFormComponent,
       SignupFormComponent,
-      NewCoursesComponent
+      NewCoursesComponent,
+      PasswordChangeComponent
    ],
    imports: [
       BrowserModule,

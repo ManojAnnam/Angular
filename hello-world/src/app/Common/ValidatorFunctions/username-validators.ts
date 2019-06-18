@@ -18,4 +18,15 @@ export class UsernameValidators {
       }, 2000);
     });
   }
+
+  static invalidOldPassword(
+    control: AbstractControl
+  ): Promise<ValidationErrors | null> {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (control.value !== "1234") resolve({ invalidOldPassword: true });
+        else resolve(null);
+      }, 1000);
+    });
+  }
 }
