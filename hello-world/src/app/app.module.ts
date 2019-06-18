@@ -22,35 +22,41 @@ import { InputFormatDirective } from "./input-format.directive";
 import { AssignmentZippyComponent } from "./assignment-zippy/assignment-zippy.component";
 import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { SignupFormComponent } from "./signup-form/signup-form.component";
+import { NewCoursesComponent } from './new-courses/new-courses.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CoursesComponent,
-    SummaryPipe,
-    TitleCaseConverterComponent,
-    StarIconComponent,
-    BootstrapPanelComponent,
-    LikesComponent,
-    DirectivesUsageComponent,
-    InputFormatDirective,
-    AssignmentZippyComponent,
-    ContactFormComponent,
-    SignupFormComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    AngularFontAwesomeModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    MatExpansionModule,
-    MatButtonModule,
-    ReactiveFormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-  entryComponents: [CoursesComponent]
+   declarations: [
+      AppComponent,
+      CoursesComponent,
+      SummaryPipe,
+      TitleCaseConverterComponent,
+      StarIconComponent,
+      BootstrapPanelComponent,
+      LikesComponent,
+      DirectivesUsageComponent,
+      InputFormatDirective,
+      AssignmentZippyComponent,
+      ContactFormComponent,
+      SignupFormComponent,
+      NewCoursesComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      FormsModule,
+      AngularFontAwesomeModule,
+      BrowserAnimationsModule,
+      MatInputModule,
+      MatExpansionModule,
+      MatButtonModule,
+      ReactiveFormsModule
+   ],
+   providers: [],
+   bootstrap: [
+      AppComponent
+   ],
+   entryComponents: [
+      CoursesComponent
+   ]
 })
 export class AppModule {}
