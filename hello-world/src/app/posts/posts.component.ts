@@ -9,13 +9,13 @@ import { HttpClient } from "@angular/common/http";
 export class PostsComponent implements OnInit {
   posts: any[];
   url: string = "https://jsonplaceholder.typicode.com/posts";
-  constructor(private http: HttpClient) {
-    http.get(this.url).subscribe((response: any[]) => {
+  constructor(private http: HttpClient) {}
+
+  ngOnInit() {
+    this.http.get(this.url).subscribe((response: any[]) => {
       this.posts = response;
     });
   }
-
-  ngOnInit() {}
 
   createPost(titleValue: HTMLInputElement) {
     let post: any = {
