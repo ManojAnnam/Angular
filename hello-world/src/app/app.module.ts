@@ -24,6 +24,8 @@ import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { SignupFormComponent } from "./signup-form/signup-form.component";
 import { NewCoursesComponent } from './new-courses/new-courses.component';
 import { PasswordChangeComponent } from './password-change/password-change.component';
+import { PostsComponent } from './posts/posts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
    declarations: [
@@ -40,7 +42,8 @@ import { PasswordChangeComponent } from './password-change/password-change.compo
       ContactFormComponent,
       SignupFormComponent,
       NewCoursesComponent,
-      PasswordChangeComponent
+      PasswordChangeComponent,
+      PostsComponent
    ],
    imports: [
       BrowserModule,
@@ -51,7 +54,8 @@ import { PasswordChangeComponent } from './password-change/password-change.compo
       MatInputModule,
       MatExpansionModule,
       MatButtonModule,
-      ReactiveFormsModule
+      ReactiveFormsModule,
+      HttpClientModule
    ],
    providers: [],
    bootstrap: [
