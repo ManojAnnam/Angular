@@ -57,12 +57,17 @@ export class PostsComponent implements OnInit {
   deletePost(post) {
     this.service.deletePost("/" + post.id).subscribe(
       response => {
+        console.log(response);
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
       },
-      error => {
-        alert("An unexpected Error occured");
-        console.log(error);
+      (error: Response) => {
+        if (error.status === 404) {
+          alert("The post is not found");
+        } else {
+          alert("An unexpected Error occured");
+          console.log(error);
+        }
       }
     );
   }

@@ -15,13 +15,13 @@ export class PostService {
     return this.http.post(this.url, post);
   }
 
-  updatePost(updateUrlString:string,data){
-    let updateUrl = this.url+updateUrlString;
-    return this.http.patch(updateUrl,data);
+  updatePost(updateUrlString: string, data) {
+    let updateUrl = this.url + updateUrlString;
+    return this.http.patch(updateUrl, data);
   }
 
-  deletePost(deleteUrlString:string){
-    let deleteUrl = this.url+deleteUrlString;
-      return this.http.delete(deleteUrl);
+  deletePost(deleteUrlString: string) {
+    let deleteUrl = this.url + deleteUrlString;
+    return this.http.delete(deleteUrl);
   }
 }
