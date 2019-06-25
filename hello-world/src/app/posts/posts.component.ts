@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { PostService } from "./post.service";
+import { AppError } from "../Common/app-error";
+import { NotFoundError } from "../Common/not-found-error";
 
 @Component({
   selector: "app-posts",
@@ -61,8 +63,8 @@ export class PostsComponent implements OnInit {
         let index = this.posts.indexOf(post);
         this.posts.splice(index, 1);
       },
-      (error: Response) => {
-        if (error.status === 404) {
+      (error: AppError) => {
+        if (error instanceof NotFoundError) {
           alert("The post is not found");
         } else {
           alert("An unexpected Error occured");
